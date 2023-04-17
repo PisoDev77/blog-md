@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import cheerio from "cheerio";
 import { marked } from "marked";
 import { v4 as uuid } from "uuid";
 
@@ -17,9 +18,20 @@ const getTitle = (content) => {
   // 첫 번째 h1 태그에서 내용을 추출합니다.
   const contentStartIndex = firstH1.indexOf(">") + 1;
   const contentEndIndex = firstH1.lastIndexOf("<");
-  const res = firstH1.slice(contentStartIndex, contentEndIndex);
+  const title = firstH1.slice(contentStartIndex, contentEndIndex);
 
-  return res;
+  // cheerio를 사용하여 HTML 문자열 파싱
+  const $ = cheerio.load(`<main>${content}</main>`);
+  const str = $("main").text();
+
+  const firstIndex = str.indexOf(title); // 찾은 문자열의 첫 번째 인덱스
+  const description =
+    str.substring(0, firstIndex) + str.substring(firstIndex).replace(title, "");
+
+  return {
+    title,
+    description,
+  };
 };
 
 /**
@@ -27,7 +39,7 @@ const getTitle = (content) => {
  */
 const setArticle = (fileDir) => {
   const content = marked(fs.readFileSync(fileDir, "utf-8"));
-  const title = getTitle(content);
+  const { title, description } = getTitle(content);
 
   data.articles.push({
     id: uuid(),
@@ -38,6 +50,7 @@ const setArticle = (fileDir) => {
         : fileDir.replace(/.*\\([^\\]+)\.md$/, "$1"),
     date: Date.now(),
     content,
+    description,
   });
 };
 
