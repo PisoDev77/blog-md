@@ -28,9 +28,14 @@ const getTitleAndDescription = (content) => {
   const description =
     str.substring(0, firstIndex) + str.substring(firstIndex).replace(title, "");
 
+  console.log(
+    description.slice(0, 30) + (description.length > 30 ? "..." : "")
+  );
+
   return {
     title,
-    description,
+    description:
+      description.slice(0, 30) + (description.length > 30 ? "..." : ""),
   };
 };
 
