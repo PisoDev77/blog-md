@@ -8,18 +8,37 @@ const data = {
   currentCategory: "Default",
 };
 
+const getTitle = (content) => {
+  // 문자열에서 첫 번째 h1 태그를 찾습니다.
+  const startIndex = content.indexOf("<h1");
+  const endIndex = content.indexOf("</h1>") + "</h1>".length;
+  const firstH1 = content.slice(startIndex, endIndex);
+
+  // 첫 번째 h1 태그에서 내용을 추출합니다.
+  const contentStartIndex = firstH1.indexOf(">") + 1;
+  const contentEndIndex = firstH1.lastIndexOf("<");
+  const content = firstH1.slice(contentStartIndex, contentEndIndex);
+
+  return content;
+};
+
 /**
  * 하나의 글 데이터를 생성한다.
  */
 const setArticle = (fileDir) => {
+  const content = marked(fs.readFileSync(fileDir, "utf-8"));
+  const title = getTitle(content);
+
   data.articles.push({
     id: uuid(),
     category: data.currentCategory,
-    title: fileDir.replace(/.*\\([^\\]+)\.md$/, "$1"),
+    title:
+      title !== ""
+        ? getTitle(content)
+        : fileDir.replace(/.*\\([^\\]+)\.md$/, "$1"),
     date: Date.now(),
-    content: marked(fs.readFileSync(fileDir, "utf-8")),
+    content,
   });
-  console.log(fileDir.replace(/.*\\([^\\]+)\.md$/, "$1"));
 };
 
 /**
