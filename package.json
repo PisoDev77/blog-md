@@ -6,9 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "git_process": "npm run build && git add -f ./dist && git commit -m \"Deploy message\"",
+    "deploy": "npm run git_process && git push origin main && gh-pages -d dist"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "typescript": "^4.9.3",
     "vite": "^4.1.0"
   },

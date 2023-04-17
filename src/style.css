@@ -1,3 +1,22 @@
 body {
   padding: 1rem;
 }
+.blog-navigation {
+  font-weight: bold;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.menus {
+  width: fit-content;
+  height: 100vh;
+  padding: 1rem;
+  background-color: var(--color-canvas-default);
+  opacity: 1;
+}
