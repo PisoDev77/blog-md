@@ -1,20 +1,19 @@
 import { getArticle } from "../lib/article";
 import { currentContent } from "../type/article";
 
+import ArticleListBox from "./ArticleListBox";
+import ArticleBox from "./ArticleBox";
+
 const articleName = "content-body";
 
 export default function Article(current: currentContent) {
   const drawContent = () => {
     if (Array.isArray(current))
-      return current
-        .map(
-          (article) =>
-            `<section data-id="${article.id}">${article.title}</section>`
-        )
-        .join("");
-    return `<section data-id="${current.id}">${current.content}</section>`;
+      return `
+      <h2>${current[0]?.category ?? ""}</h2>
+      ${current.map((article) => ArticleListBox(article)).join("")}`;
+    return ArticleBox(current);
   };
-
   return `
   <article class="${articleName}">${
     current !== undefined ? drawContent() : ""
@@ -25,8 +24,13 @@ export default function Article(current: currentContent) {
 const eventHandler = (event: MouseEvent) => {
   const target = event.target as HTMLDivElement;
   if (target.closest("." + articleName)) {
-    const id = target.dataset.id;
-    return getArticle(id ?? "");
+    const articleListBox = target.closest(
+      ".article-list-box"
+    ) as HTMLDivElement;
+
+    if (articleListBox) {
+      return getArticle(articleListBox.dataset.id ?? "");
+    }
   }
   return;
 };

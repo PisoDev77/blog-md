@@ -9,7 +9,7 @@ export default function Navigation(isMenuOpen: boolean) {
   return `
   ${MenuBtn()}
   <nav class="${navigatioName}"> 
-    ${isMenuOpen ? Menus() : ""}
+    ${isMenuOpen ? Menus(isMenuOpen) : ""}
   </nav>`;
 }
 

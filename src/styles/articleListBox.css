@@ -1,0 +1,16 @@
+.article-list-box {
+  border: 1px solid var(--color-fg-default);
+  border-radius: 1rem;
+  padding-left: 1rem;
+  box-shadow: 0.1em 0.1em 1em var(--color-canvas-subtle),
+    0.1em 0.1em 1em var(--color-canvas-subtle);
+
+  transition: background-color 1s ease, color 1s ease, border-radius 1s ease;
+}
+
+.article-list-box:hover {
+  border-radius: 1rem;
+  font-weight: bolder;
+  color: var(--color-canvas-default);
+  background-color: var(--color-fg-default);
+}

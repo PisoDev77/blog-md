@@ -1,11 +1,12 @@
-const id = "menu-btn";
+const menuBtn = "menu-btn";
+
 export default function MenuBtn() {
-  return `<button id="${id}">menu show</button>`;
+  return `<i class="${menuBtn} bx bx-menu"></i>`;
 }
 
 const eventHandler = (event: MouseEvent) => {
   const target = event.target as HTMLButtonElement;
-  if (target.id === id) {
+  if (target.classList.contains(menuBtn)) {
     return true;
   }
   return false;

@@ -1,4 +1,6 @@
 import "./style.css";
+import "./darkmode.css";
+
 import Navigation, { eventHandler as navEvent } from "./components/Nav";
 import Article, { eventHandler as articleEvent } from "./components/Article";
 import { eventHandler as menubtnEvent } from "./components/MenuBtn";
@@ -41,4 +43,6 @@ const render = (article: currentContent) => {
   $app.innerHTML = Navigation(currents.menus) + Article(article);
 };
 
-render(currents.currentArticles);
+window.addEventListener("DOMContentLoaded", () => {
+  render(currents.currentArticles);
+});
