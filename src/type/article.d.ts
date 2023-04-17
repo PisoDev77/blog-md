@@ -4,6 +4,7 @@ type articleType = {
   category: string;
   date: number;
   content: string;
+  description: string;
 };
 
 type currentContent = articleType | articleType[];
