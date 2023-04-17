@@ -28,10 +28,6 @@ const getTitleAndDescription = (content) => {
   const description =
     str.substring(0, firstIndex) + str.substring(firstIndex).replace(title, "");
 
-  console.log(
-    description.slice(0, 30) + (description.length > 30 ? "..." : "")
-  );
-
   return {
     title,
     description:
@@ -105,8 +101,18 @@ export default function preProcessArticles() {
     getArticles("md/" + category);
   });
 
+  const readme = {
+    id: "initial-article",
+    category: "README",
+    title: "",
+    date: Date.now(),
+    content: marked(fs.readFileSync("README.md", "utf-8")),
+    description: "",
+  };
+
   const result = {
     articles: data.articles,
+    readme,
     categories,
   };
 
