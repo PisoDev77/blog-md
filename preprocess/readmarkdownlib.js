@@ -17,9 +17,9 @@ const getTitle = (content) => {
   // 첫 번째 h1 태그에서 내용을 추출합니다.
   const contentStartIndex = firstH1.indexOf(">") + 1;
   const contentEndIndex = firstH1.lastIndexOf("<");
-  const content = firstH1.slice(contentStartIndex, contentEndIndex);
+  const res = firstH1.slice(contentStartIndex, contentEndIndex);
 
-  return content;
+  return res;
 };
 
 /**
