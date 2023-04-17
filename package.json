@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "git_process": "npm run build && git add -f ./dist && git commit -m \"Deploy message\"",
+    "git_process": "npm run build && git add -f ./dist ./src/data.json && git commit -m \"Deploy message\"",
     "deploy": "npm run git_process && git push origin main && gh-pages -d dist"
   },
   "devDependencies": {
