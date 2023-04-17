@@ -1,0 +1,22 @@
+{
+  "articles": [
+    {
+      "id": "2b57ddcf-993e-4541-8cf6-02e308ef5747",
+      "category": "javascript",
+      "title": "test2",
+      "date": 1681727092993,
+      "content": "<h1 id=\"js-글입니다\">jS 글입니다.</h1>\n"
+    },
+    {
+      "id": "37e134ae-3e01-418f-a074-d945584658cd",
+      "category": "react",
+      "title": "test1",
+      "date": 1681727093005,
+      "content": "<h1 id=\"리액트-카테고리의-글입니다\">리액트 카테고리의 글입니다.</h1>\n"
+    }
+  ],
+  "categories": [
+    "javascript",
+    "react"
+  ]
+}
