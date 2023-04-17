@@ -9,7 +9,7 @@ const data = {
   currentCategory: "Default",
 };
 
-const getTitle = (content) => {
+const getTitleAndDescription = (content) => {
   // 문자열에서 첫 번째 h1 태그를 찾습니다.
   const startIndex = content.indexOf("<h1");
   const endIndex = content.indexOf("</h1>") + "</h1>".length;
@@ -39,15 +39,12 @@ const getTitle = (content) => {
  */
 const setArticle = (fileDir) => {
   const content = marked(fs.readFileSync(fileDir, "utf-8"));
-  const { title, description } = getTitle(content);
+  const { title, description } = getTitleAndDescription(content);
 
   data.articles.push({
     id: uuid(),
     category: data.currentCategory,
-    title:
-      title !== ""
-        ? getTitle(content)
-        : fileDir.replace(/.*\\([^\\]+)\.md$/, "$1"),
+    title: title !== "" ? title : fileDir.replace(/.*\\([^\\]+)\.md$/, "$1"),
     date: Date.now(),
     content,
     description,
