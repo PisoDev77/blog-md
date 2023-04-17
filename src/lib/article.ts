@@ -1,5 +1,6 @@
-import { articles, categories } from "../data.json";
+import { articles, categories, readme } from "../data.json";
 import { articleType } from "../type/article";
+import { getArticleIdFromURL } from "./route";
 
 const getArticlesByCategory = (category: string): articleType[] => {
   return [
@@ -22,4 +23,14 @@ const getArticle = (id: string) => {
   return result;
 };
 
-export { getArticlesByCategory, getCategories, getArticlesSize, getArticle };
+const getArticleByURL = () => {
+  return getArticle(getArticleIdFromURL()) ?? readme;
+};
+
+export {
+  getArticlesByCategory,
+  getCategories,
+  getArticlesSize,
+  getArticle,
+  getArticleByURL,
+};
