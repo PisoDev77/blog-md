@@ -15,3 +15,4 @@
   </nav>`}const j=t=>{const e=t.target;if(e.closest("."+m)){const r=e.dataset.category;return r?[...g(r)]:void 0}},p="content-body";function w(t){return`
   <article class="${p}">${t!==void 0?(()=>Array.isArray(t)?t.map(r=>`<section data-id="${r.id}">${r.title}</section>`).join(""):`<section data-id="${t.id}">${t.content}</section>`)():""}</article>
   `}const u=t=>{const e=t.target;if(e.closest("."+p)){const r=e.dataset.id;return L(r??"")}},a=document.getElementById("app");document.body.className="markdown-body";const i={currentArticles:[],menus:!1},o=new Proxy(i,{set(t,e,r){return t[e]=r,y(e==="currentArticles"?r:i.currentArticles),!0}});a.addEventListener("click",t=>{const e=j(t);e&&(o.currentArticles=e),o.menus=!1});a.addEventListener("click",t=>{u(t)&&(o.currentArticles=u(t)),o.menus=!1});a.addEventListener("click",t=>{o.menus=$(t)});const y=t=>{a.innerHTML=P(i.menus)+w(t)};y(i.currentArticles);
+//# sourceMappingURL=index-7c4d10ae.js.map
