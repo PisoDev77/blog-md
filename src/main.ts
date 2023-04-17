@@ -5,9 +5,9 @@ import Navigation, { eventHandler as navEvent } from "./components/Nav";
 import Article, { eventHandler as articleEvent } from "./components/Article";
 import { eventHandler as menubtnEvent } from "./components/MenuBtn";
 import { articleType, currentContent } from "./type/article";
+import { getArticleByURL } from "./lib/article";
 
 const $app = document.getElementById("app") as HTMLDivElement;
-
 document.body.className = "markdown-body";
 
 const currents: { currentArticles: articleType[]; menus: boolean } = {
@@ -44,5 +44,5 @@ const render = (article: currentContent) => {
 };
 
 window.addEventListener("DOMContentLoaded", () => {
-  render(currents.currentArticles);
+  articleProxy.currentArticles = getArticleByURL();
 });
