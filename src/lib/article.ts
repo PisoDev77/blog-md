@@ -5,7 +5,9 @@ const getArticlesByCategory = (category: string): articleType[] => {
   return [
     ...(category === "all"
       ? articles
-      : articles.filter((article) => article.category === category)),
+      : articles.filter(
+          (article: articleType) => article.category === category
+        )),
   ];
 };
 
@@ -15,7 +17,7 @@ const getCategories = () => categories;
 
 const getArticle = (id: string) => {
   const result = articles.find(
-    (article) => article.id + "" === id
+    (article: articleType) => article.id + "" === id
   ) as articleType;
   return result;
 };

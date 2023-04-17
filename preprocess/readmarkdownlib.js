@@ -7,6 +7,7 @@ const data = {
   articles: [],
   currentCategory: "Default",
 };
+
 /**
  * 하나의 글 데이터를 생성한다.
  */
