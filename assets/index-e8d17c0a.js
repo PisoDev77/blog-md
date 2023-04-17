@@ -1,4 +1,4 @@
-(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))c(r);new MutationObserver(r=>{for(const o of r)if(o.type==="childList")for(const d of o.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&c(d)}).observe(document,{childList:!0,subtree:!0});function n(r){const o={};return r.integrity&&(o.integrity=r.integrity),r.referrerPolicy&&(o.referrerPolicy=r.referrerPolicy),r.crossOrigin==="use-credentials"?o.credentials="include":r.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function c(r){if(r.ep)return;r.ep=!0;const o=n(r);fetch(r.href,o)}})();const f="menu-btn";function b(){return`<i class="${f} bx bx-menu"></i>`}const y=e=>!!e.target.classList.contains(f),l=[{id:"e50c6984-dc5d-4aaa-a46a-301c52a02c83",category:"javascript",title:"Debounce( 디바운스 ) VS Throttle( 쓰로틀 )",date:1681772113966,content:`<h1 id="debounce-디바운스--vs-throttle-쓰로틀-">Debounce( 디바운스 ) VS Throttle( 쓰로틀 )</h1>
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))i(r);new MutationObserver(r=>{for(const o of r)if(o.type==="childList")for(const a of o.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&i(a)}).observe(document,{childList:!0,subtree:!0});function n(r){const o={};return r.integrity&&(o.integrity=r.integrity),r.referrerPolicy&&(o.referrerPolicy=r.referrerPolicy),r.crossOrigin==="use-credentials"?o.credentials="include":r.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function i(r){if(r.ep)return;r.ep=!0;const o=n(r);fetch(r.href,o)}})();const f="menu-btn";function b(){return`<i class="${f} bx bx-menu"></i>`}const y=e=>!!e.target.classList.contains(f),l=[{id:"497a2ed0-3d65-4eb3-ac74-732c48db1d25",category:"javascript",title:"Debounce( 디바운스 ) VS Throttle( 쓰로틀 )",date:1681773665539,content:`<h1 id="debounce-디바운스--vs-throttle-쓰로틀-">Debounce( 디바운스 ) VS Throttle( 쓰로틀 )</h1>
 <h2 id="debounce--디바운스-">Debounce ( 디바운스 )</h2>
 <h3 id="구글-인프런-네이버-등-많은-웹-사이트에서-검색을-해보신-적-있나요">구글, 인프런, 네이버 등 많은 웹 사이트에서 검색을 해보신 적 있나요?</h3>
 <ul>
@@ -42,7 +42,10 @@
 <ul>
 <li>모든 이벤트를 감지하는 중, 특정 시간 이후에 <code>한 번만 원하는 동작</code>이 실행되도록 하는 기법이다.</li>
 </ul>
-`},{id:"acd4a6c2-1451-4b1a-92c4-59ae6ce60dee",category:"react",title:"test1",date:1681772113968,content:`<h2 id="리액트-카테고리의-글입니다">리액트 카테고리의 글입니다.</h2>
+`,description:`
+Debounce ( 디바운스 )
+구글, 인프런, 네이...`},{id:"2efef40f-9ca3-4dca-9d0d-5c1955369d54",category:"react",title:"test1",date:1681773665543,content:`<h2 id="리액트-카테고리의-글입니다">리액트 카테고리의 글입니다.</h2>
+`,description:`리액트 카테고리의 글입니다.
 `}],v=["javascript","react"],h=e=>[...e==="all"?l:l.filter(t=>t.category===e)],$=()=>l.length,L=()=>v,A=e=>l.find(n=>n.id+""===e),x=e=>e.replace(/^\w/,t=>t.toUpperCase());function B(e){return`
   <div class="modal">
   <ul class="menus ${e?"slidein":"slideout"}">
@@ -56,17 +59,17 @@
   ${b()}
   <nav class="${m}"> 
     ${e?B(e):""}
-  </nav>`}const C=e=>{const t=e.target;if(t.closest("."+m)){const n=t.dataset.category;return n?[...h(n)]:void 0}};function E(e){const{id:t,title:n}=e;return`
+  </nav>`}const C=e=>{const t=e.target;if(t.closest("."+m)){const n=t.dataset.category;return n?[...h(n)]:void 0}};function E(e){const{id:t,title:n,description:i}=e;return`
     <section class="article-list-box" data-id="${t}">
       <h3>${n}</h3>
-      <p>기타 정보</p>
+      <p>${i}</p>
     </section>
   `}function N(e){const{content:t}=e;return`
     <section">
       ${t}
     </section>
-  `}const g="content-body";function P(e){return`
-  <article class="${g}">${e!==void 0?(()=>{var n;return Array.isArray(e)?`
+  `}const p="content-body";function P(e){return`
+  <article class="${p}">${e!==void 0?(()=>{var n;return Array.isArray(e)?`
       <h2>${((n=e[0])==null?void 0:n.category)??""}</h2>
-      ${e.map(c=>E(c)).join("")}`:N(e)})():""}</article>
-  `}const u=e=>{const t=e.target;if(t.closest("."+g)){const n=t.closest(".article-list-box");if(n)return A(n.dataset.id??"")}},a=document.getElementById("app");document.body.className="markdown-body";const s={currentArticles:[],menus:!1},i=new Proxy(s,{set(e,t,n){return e[t]=n,p(t==="currentArticles"?n:s.currentArticles),!0}});a.addEventListener("click",e=>{const t=C(e);t&&(i.currentArticles=t),i.menus=!1});a.addEventListener("click",e=>{u(e)&&(i.currentArticles=u(e)),i.menus=!1});a.addEventListener("click",e=>{i.menus=y(e)});const p=e=>{a.innerHTML=w(s.menus)+P(e)};window.addEventListener("DOMContentLoaded",()=>{p(s.currentArticles)});
+      ${e.map(i=>E(i)).join("")}`:N(e)})():""}</article>
+  `}const u=e=>{const t=e.target;if(t.closest("."+p)){const n=t.closest(".article-list-box");if(n)return A(n.dataset.id??"")}},d=document.getElementById("app");document.body.className="markdown-body";const s={currentArticles:[],menus:!1},c=new Proxy(s,{set(e,t,n){return e[t]=n,g(t==="currentArticles"?n:s.currentArticles),!0}});d.addEventListener("click",e=>{const t=C(e);t&&(c.currentArticles=t),c.menus=!1});d.addEventListener("click",e=>{u(e)&&(c.currentArticles=u(e)),c.menus=!1});d.addEventListener("click",e=>{c.menus=y(e)});const g=e=>{d.innerHTML=w(s.menus)+P(e)};window.addEventListener("DOMContentLoaded",()=>{g(s.currentArticles)});
