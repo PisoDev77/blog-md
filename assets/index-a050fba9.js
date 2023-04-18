@@ -1,4 +1,4 @@
-(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))i(r);new MutationObserver(r=>{for(const o of r)if(o.type==="childList")for(const a of o.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&i(a)}).observe(document,{childList:!0,subtree:!0});function n(r){const o={};return r.integrity&&(o.integrity=r.integrity),r.referrerPolicy&&(o.referrerPolicy=r.referrerPolicy),r.crossOrigin==="use-credentials"?o.credentials="include":r.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function i(r){if(r.ep)return;r.ep=!0;const o=n(r);fetch(r.href,o)}})();const f="menu-btn";function b(){return`<i class="${f} bx bx-menu"></i>`}const y=e=>!!e.target.classList.contains(f),l=[{id:"497a2ed0-3d65-4eb3-ac74-732c48db1d25",category:"javascript",title:"Debounce( 디바운스 ) VS Throttle( 쓰로틀 )",date:1681773665539,content:`<h1 id="debounce-디바운스--vs-throttle-쓰로틀-">Debounce( 디바운스 ) VS Throttle( 쓰로틀 )</h1>
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))r(o);new MutationObserver(o=>{for(const c of o)if(c.type==="childList")for(const d of c.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&r(d)}).observe(document,{childList:!0,subtree:!0});function n(o){const c={};return o.integrity&&(c.integrity=o.integrity),o.referrerPolicy&&(c.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?c.credentials="include":o.crossOrigin==="anonymous"?c.credentials="omit":c.credentials="same-origin",c}function r(o){if(o.ep)return;o.ep=!0;const c=n(o);fetch(o.href,c)}})();const f="menu-btn";function b(){return`<i class="${f} bx bx-menu"></i>`}const y=e=>!!e.target.classList.contains(f),l=[{id:"b862a22a-68b3-4f16-9280-21c478420e0e",category:"javascript",title:"Debounce( 디바운스 ) VS Throttle( 쓰로틀 )",date:1681775789984,content:`<h1 id="debounce-디바운스--vs-throttle-쓰로틀-">Debounce( 디바운스 ) VS Throttle( 쓰로틀 )</h1>
 <h2 id="debounce--디바운스-">Debounce ( 디바운스 )</h2>
 <h3 id="구글-인프런-네이버-등-많은-웹-사이트에서-검색을-해보신-적-있나요">구글, 인프런, 네이버 등 많은 웹 사이트에서 검색을 해보신 적 있나요?</h3>
 <ul>
@@ -44,32 +44,41 @@
 </ul>
 `,description:`
 Debounce ( 디바운스 )
-구글, 인프런, 네이...`},{id:"2efef40f-9ca3-4dca-9d0d-5c1955369d54",category:"react",title:"test1",date:1681773665543,content:`<h2 id="리액트-카테고리의-글입니다">리액트 카테고리의 글입니다.</h2>
+구글, 인프런, 네이...`},{id:"25ec7c5c-7980-4ffa-a81e-c22fae7ceda6",category:"react",title:"test1",date:1681775789986,content:`<h2 id="리액트-카테고리의-글입니다">리액트 카테고리의 글입니다.</h2>
 `,description:`리액트 카테고리의 글입니다.
-`}],v=["javascript","react"],h=e=>[...e==="all"?l:l.filter(t=>t.category===e)],$=()=>l.length,L=()=>v,A=e=>l.find(n=>n.id+""===e),x=e=>e.replace(/^\w/,t=>t.toUpperCase());function B(e){return`
+`}],v={id:"initial-article",category:"README",title:"",date:1681775789986,content:`<h1 id="blog-md">blog-md</h1>
+<blockquote>
+<p><code>TypeScript</code>와 <code>Vite</code> 그리고 <code>Node</code>의 <code>fs</code> 모듈을 활용한 &#39;Markdown to html&#39; 프로젝트입니다.
+복잡한 기타 라이브러리들은 이해하기에 난해하여, 단순한 프로세스로 만든 프로젝트입니다.
+<code>.md</code>파일을 <code>marked</code> 모듈을 이용해서 html문법으로 변환한 문자열을 가지고 SPA 형식의 웹페이지를 구현하고자 했습니다.</p>
+</blockquote>
+<ul>
+<li>markdown을 정적 페이지로 볼 수 있는 프로젝트입니다.</li>
+</ul>
+`,description:""},$=["javascript","react"],A=()=>{const e=decodeURI(window.location.href+"/").slice(0,-1).split("/");return e[e.length-1]},h=e=>[...e==="all"?l:l.filter(t=>t.category===e)],L=()=>l.length,w=()=>$,m=e=>l.find(n=>n.id+""===e),x=()=>m(A())??v,B=e=>e.replace(/^\w/,t=>t.toUpperCase());function E(e){return`
   <div class="modal">
   <ul class="menus ${e?"slidein":"slideout"}">
-    <h2>Piso's Blog<sub> (${$()})</sub></h2>
-      ${L().map(t=>`<li data-category="${t}">
-              ${x(t)} <sub>(${h(t).length})</sub>
+    <h2>Piso's Blog<sub> (${L()})</sub></h2>
+      ${w().map(t=>`<li data-category="${t}">
+              ${B(t)} <sub>(${h(t).length})</sub>
             </li>`).join("")}
     </ul>
   </div>
-  `}const m="blog-navigation";function w(e){return`
+  `}const p="blog-navigation";function k(e){return`
   ${b()}
-  <nav class="${m}"> 
-    ${e?B(e):""}
-  </nav>`}const C=e=>{const t=e.target;if(t.closest("."+m)){const n=t.dataset.category;return n?[...h(n)]:void 0}};function E(e){const{id:t,title:n,description:i}=e;return`
+  <nav class="${p}"> 
+    ${e?E(e):""}
+  </nav>`}const C=e=>{const t=e.target;if(t.closest("."+p)){const n=t.dataset.category;return n?[...h(n)]:void 0}};function N(e){const{id:t,title:n,description:r}=e;return`
     <section class="article-list-box" data-id="${t}">
       <h3>${n}</h3>
-      <p>${i}</p>
+      <p>${r}</p>
     </section>
-  `}function N(e){const{content:t}=e;return`
+  `}function P(e){const{content:t}=e;return`
     <section">
       ${t}
     </section>
-  `}const p="content-body";function P(e){return`
-  <article class="${p}">${e!==void 0?(()=>{var n;return Array.isArray(e)?`
+  `}const g="content-body";function q(e){return`
+  <article class="${g}">${e!==void 0?(()=>{var n;return Array.isArray(e)?`
       <h2>${((n=e[0])==null?void 0:n.category)??""}</h2>
-      ${e.map(i=>E(i)).join("")}`:N(e)})():""}</article>
-  `}const u=e=>{const t=e.target;if(t.closest("."+p)){const n=t.closest(".article-list-box");if(n)return A(n.dataset.id??"")}},d=document.getElementById("app");document.body.className="markdown-body";const s={currentArticles:[],menus:!1},c=new Proxy(s,{set(e,t,n){return e[t]=n,g(t==="currentArticles"?n:s.currentArticles),!0}});d.addEventListener("click",e=>{const t=C(e);t&&(c.currentArticles=t),c.menus=!1});d.addEventListener("click",e=>{u(e)&&(c.currentArticles=u(e)),c.menus=!1});d.addEventListener("click",e=>{c.menus=y(e)});const g=e=>{d.innerHTML=w(s.menus)+P(e)};window.addEventListener("DOMContentLoaded",()=>{g(s.currentArticles)});
+      ${e.map(r=>N(r)).join("")}`:P(e)})():""}</article>
+  `}const u=e=>{const t=e.target;if(t.closest("."+g)){const n=t.closest(".article-list-box");if(n)return m(n.dataset.id??"")}},s=document.getElementById("app");document.body.className="markdown-body";const a={currentArticles:[],menus:!1},i=new Proxy(a,{set(e,t,n){return e[t]=n,D(t==="currentArticles"?n:a.currentArticles),!0}});s.addEventListener("click",e=>{const t=C(e);t&&(i.currentArticles=t),i.menus=!1});s.addEventListener("click",e=>{u(e)&&(i.currentArticles=u(e)),i.menus=!1});s.addEventListener("click",e=>{i.menus=y(e)});const D=e=>{s.innerHTML=k(a.menus)+q(e)};window.addEventListener("DOMContentLoaded",()=>{i.currentArticles=x()});
