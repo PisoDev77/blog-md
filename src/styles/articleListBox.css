@@ -6,6 +6,11 @@
     0.1em 0.1em 1em var(--color-canvas-subtle);
 
   transition: background-color 1s ease, color 1s ease, border-radius 1s ease;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .article-list-box > p {
@@ -17,4 +22,14 @@
   font-weight: bolder;
   color: var(--color-canvas-default);
   background-color: var(--color-fg-default);
+}
+
+.article-list-box > div {
+  flex-grow: 8;
+}
+
+.article-list-box > img {
+  flex-grow: 2;
+  width: 20%;
+  background: none;
 }
