@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 793.7 1122.5" xmlns="http://www.w3.org/2000/svg">
+ <path d="m642.29 479.96a226.32 230.7 0 1 1 9.16e-4 -0.088989" fill="#ffaa56" stroke-dashoffset="62.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+ <g fill="none" stroke="#000">
+  <g fill-rule="evenodd">
+   <path d="m318.29 430.99c51.122 24.567 92.001 62.244 171.34-7.7916" stroke-linecap="round" stroke-width="38.301"/>
+   <path d="m208.7 104.05c-0.33353 0-0.66704 0 0 0z" stroke-width=".735"/>
+  </g>
+  <g stroke-linecap="round" stroke-linejoin="round">
+   <path d="m482.23 691.76c43.65-20.129 139.9-84.894 140.37-217.31 0.47198-133.18-104.07-232.35-213.78-229.23-108.02 3.118-227.02 74.89-227.83 228.73-0.815 153.08 124.83 227.79 321.55 279.95 117.65 31.877-284.12 28.303-236.69 43.457 58.496 18.689 328.81 36.169 247.39 57.321-78.304 20.341-203.76 10.205-248.72 35.012-40.321 22.248 438.99 19.995 195.21 69.445" fill-rule="evenodd" stroke-width="38.849"/>
+   <g stroke-width="36">
+    <line transform="rotate(57.861 697.16 298.88)" x1="697.16" x2="697.16" y1="253.55" y2="344.22"/>
+    <line transform="rotate(-55.4 100.38 308.56)" x1="100.38" x2="100.38" y1="263.23" y2="353.9"/>
+    <line transform="rotate(-29.137 241.38 169.56)" x1="241.38" x2="241.38" y1="124.23" y2="214.9"/>
+    <line transform="rotate(33.189 567.38 170.56)" x1="567.38" x2="567.38" y1="125.23" y2="215.9"/>
+   </g>
+  </g>
+ </g>
+</svg>
