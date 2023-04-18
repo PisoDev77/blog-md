@@ -1,4 +1,4 @@
-(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))r(o);new MutationObserver(o=>{for(const c of o)if(c.type==="childList")for(const d of c.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&r(d)}).observe(document,{childList:!0,subtree:!0});function n(o){const c={};return o.integrity&&(c.integrity=o.integrity),o.referrerPolicy&&(c.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?c.credentials="include":o.crossOrigin==="anonymous"?c.credentials="omit":c.credentials="same-origin",c}function r(o){if(o.ep)return;o.ep=!0;const c=n(o);fetch(o.href,c)}})();const f="menu-btn";function b(){return`<i class="${f} bx bx-menu"></i>`}const y=e=>!!e.target.classList.contains(f),l=[{id:"b862a22a-68b3-4f16-9280-21c478420e0e",category:"javascript",title:"Debounce( 디바운스 ) VS Throttle( 쓰로틀 )",date:1681775789984,content:`<h1 id="debounce-디바운스--vs-throttle-쓰로틀-">Debounce( 디바운스 ) VS Throttle( 쓰로틀 )</h1>
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))c(o);new MutationObserver(o=>{for(const r of o)if(r.type==="childList")for(const d of r.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&c(d)}).observe(document,{childList:!0,subtree:!0});function n(o){const r={};return o.integrity&&(r.integrity=o.integrity),o.referrerPolicy&&(r.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?r.credentials="include":o.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function c(o){if(o.ep)return;o.ep=!0;const r=n(o);fetch(o.href,r)}})();const f="menu-btn";function b(){return`<i class="${f} bx bx-menu"></i>`}const y=e=>!!e.target.classList.contains(f),l=[{id:"b862a22a-68b3-4f16-9280-21c478420e0e",category:"javascript",title:"Debounce( 디바운스 ) VS Throttle( 쓰로틀 )",date:1681775789984,content:`<h1 id="debounce-디바운스--vs-throttle-쓰로틀-">Debounce( 디바운스 ) VS Throttle( 쓰로틀 )</h1>
 <h2 id="debounce--디바운스-">Debounce ( 디바운스 )</h2>
 <h3 id="구글-인프런-네이버-등-많은-웹-사이트에서-검색을-해보신-적-있나요">구글, 인프런, 네이버 등 많은 웹 사이트에서 검색을 해보신 적 있나요?</h3>
 <ul>
@@ -64,21 +64,24 @@ Debounce ( 디바운스 )
             </li>`).join("")}
     </ul>
   </div>
-  `}const p="blog-navigation";function k(e){return`
+  `}const g="blog-navigation";function k(e){return`
   ${b()}
-  <nav class="${p}"> 
+  <nav class="${g}"> 
     ${e?E(e):""}
-  </nav>`}const C=e=>{const t=e.target;if(t.closest("."+p)){const n=t.dataset.category;return n?[...h(n)]:void 0}};function N(e){const{id:t,title:n,description:r}=e;return`
+  </nav>`}const C=e=>{const t=e.target;if(t.closest("."+g)){const n=t.dataset.category;return n?[...h(n)]:void 0}};function N(e){const{id:t,title:n,description:c,category:o}=e;return`
     <section class="article-list-box" data-id="${t}">
-      <h3>${n}</h3>
-      <p>${r}</p>
+      <div>
+        <h3>${n}</h3>
+        <p>${c}</p>
+      </div>
+      <img src="/${o}.svg" onerror="this.src ='/default.svg'" type="image/svg+xml" />
     </section>
   `}function P(e){const{content:t}=e;return`
     <section">
       ${t}
     </section>
-  `}const g="content-body";function q(e){return`
-  <article class="${g}">${e!==void 0?(()=>{var n;return Array.isArray(e)?`
+  `}const p="content-body";function q(e){return`
+  <article class="${p}">${e!==void 0?(()=>{var n;return Array.isArray(e)?`
       <h2>${((n=e[0])==null?void 0:n.category)??""}</h2>
-      ${e.map(r=>N(r)).join("")}`:P(e)})():""}</article>
-  `}const u=e=>{const t=e.target;if(t.closest("."+g)){const n=t.closest(".article-list-box");if(n)return m(n.dataset.id??"")}},s=document.getElementById("app");document.body.className="markdown-body";const a={currentArticles:[],menus:!1},i=new Proxy(a,{set(e,t,n){return e[t]=n,D(t==="currentArticles"?n:a.currentArticles),!0}});s.addEventListener("click",e=>{const t=C(e);t&&(i.currentArticles=t),i.menus=!1});s.addEventListener("click",e=>{u(e)&&(i.currentArticles=u(e)),i.menus=!1});s.addEventListener("click",e=>{i.menus=y(e)});const D=e=>{s.innerHTML=k(a.menus)+q(e)};window.addEventListener("DOMContentLoaded",()=>{i.currentArticles=x()});
+      ${e.map(c=>N(c)).join("")}`:P(e)})():""}</article>
+  `}const u=e=>{const t=e.target;if(t.closest("."+p)){const n=t.closest(".article-list-box");if(n)return m(n.dataset.id??"")}},s=document.getElementById("app");document.body.className="markdown-body";const a={currentArticles:[],menus:!1},i=new Proxy(a,{set(e,t,n){return e[t]=n,D(t==="currentArticles"?n:a.currentArticles),!0}});s.addEventListener("click",e=>{const t=C(e);t&&(i.currentArticles=t),i.menus=!1});s.addEventListener("click",e=>{u(e)&&(i.currentArticles=u(e)),i.menus=!1});s.addEventListener("click",e=>{i.menus=y(e)});const D=e=>{s.innerHTML=k(a.menus)+q(e)};window.addEventListener("DOMContentLoaded",()=>{i.currentArticles=x()});
