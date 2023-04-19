@@ -193,13 +193,13 @@ useSta...`}],x={id:"initial-article",category:"README",title:"",date:16818765848
   ${b()}
   <nav class="${m}"> 
     ${e?$(e):""}
-  </nav>`}const L=e=>{const t=e.target;if(t.closest("."+m)){const n=t.dataset.category;return n?[...h(n)]:void 0}};function S(e){const{id:t,title:n,description:i,category:o}=e;return`
+  </nav>`}const L=e=>{const t=e.target;if(t.closest("."+m)){const n=t.dataset.category;return n?[...h(n)]:void 0}};function S(e){console.log("sss","/");const{id:t,title:n,description:i,category:o}=e;return`
     <section class="article-list-box" data-id="${t}">
       <div>
         <h3>${n}</h3>
         <p>${i}</p>
       </div>
-      <img src="/${o}.svg" onerror="this.src ='/default.svg'" type="image/svg+xml" />
+      <img src="./${o}.svg" onerror="this.src ='/default.svg'" type="image/svg+xml" />
     </section>
   `}function k(e){const{content:t}=e;return`
     <section">
@@ -210,4 +210,3 @@ useSta...`}],x={id:"initial-article",category:"README",title:"",date:16818765848
       <h2>${((n=e[0])==null?void 0:n.category)??""}</h2>
       ${e.map(i=>S(i)).join("")}`:k(e)})():""}</article>
   `}const a=e=>{const t=e.target;if(t.closest("."+f)){const n=t.closest(".article-list-box");if(n)return g(n.dataset.id??"")}},d=document.getElementById("app");document.body.className="markdown-body";const u={currentArticles:[],menus:!1},l=new Proxy(u,{set(e,t,n){return e[t]=n,B(t==="currentArticles"?n:u.currentArticles),!0}});d.addEventListener("click",e=>{const t=L(e);t&&(l.currentArticles=t),l.menus=!1});d.addEventListener("click",e=>{a(e)&&(l.currentArticles=a(e)),l.menus=!1});d.addEventListener("click",e=>{l.menus=y(e)});const B=e=>{d.innerHTML=M(u.menus)+w(e)};window.addEventListener("DOMContentLoaded",()=>{l.currentArticles=R()});
-//# sourceMappingURL=index-1692dc0f.js.map
