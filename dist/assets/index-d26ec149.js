@@ -173,7 +173,7 @@ useSta...`,fileDir:"md\\react\\hooks\\useState.md"},{category:"react",id:"c91942
 <h1 id="수정-후후후후wdgwdbwrbwrb">수정 후후후후wdgwdbwrbwrb</h1>
 `,description:`
 수정 후후후후wdgwdbwrbwrb
-`,fileDir:"md\\react\\test.md"}],x={id:"initial-article",category:"README",title:"",date:1681885692337,content:`<h1 id="blog-md">blog-md</h1>
+`,fileDir:"md\\react\\test.md"}],x={id:"initial-article",category:"README",title:"",date:1681886901092,content:`<h1 id="blog-md">blog-md</h1>
 <blockquote>
 <p><code>TypeScript</code>와 <code>Vite</code> 그리고 <code>Node</code>의 <code>fs</code> 모듈을 활용한 &#39;Markdown to html&#39; 프로젝트입니다.
 복잡한 기타 라이브러리들은 이해하기에 난해하여, 단순한 프로세스로 만든 프로젝트입니다.
@@ -182,20 +182,20 @@ useSta...`,fileDir:"md\\react\\hooks\\useState.md"},{category:"react",id:"c91942
 <ul>
 <li>markdown을 정적 페이지로 볼 수 있는 프로젝트입니다.</li>
 </ul>
-`,description:""},C=["javascript","react"],v=()=>{const e=decodeURI(window.location.href+"/").slice(0,-1).split("/");return e[e.length-1]},p=e=>[...e==="all"?l:l.filter(t=>t.category===e)],A=()=>l.length,R=()=>C,m=e=>l.find(n=>n.id+""===e),q=()=>m(v())??x,w=e=>e.replace(/^\w/,t=>t.toUpperCase());function P(e){return`
+`,description:""},C=["javascript","react"],v=()=>{const e=decodeURI(window.location.href+"/").slice(0,-1).split("/");return e[e.length-1]},w=()=>new URLSearchParams(window.location.search).get("id"),p=e=>[...e==="all"?l:l.filter(t=>t.category===e)],A=()=>l.length,R=()=>C,m=e=>l.find(n=>n.id+""===e),P=()=>m(w()??v())??x,q=e=>e.replace(/^\w/,t=>t.toUpperCase());function $(e){return`
   <div class="modal">
   <ul class="menus ${e?"slidein":"slideout"}">
     <h2>Piso's Blog<sub> (${A()})</sub></h2>
       ${R().map(t=>`<li data-category="${t}">
-              ${w(t)} <sub>(${p(t).length})</sub>
+              ${q(t)} <sub>(${p(t).length})</sub>
             </li>`).join("")}
     </ul>
   </div>
-  `}const g="blog-navigation";function $(e){return`
+  `}const g="blog-navigation";function S(e){return`
   ${b()}
   <nav class="${g}"> 
-    ${e?P(e):""}
-  </nav>`}const S=e=>{const t=e.target;if(t.closest("."+g)){const n=t.dataset.category;return n?[...p(n)]:void 0}};function k(e){const{id:t,title:n,description:i,category:o}=e;return`
+    ${e?$(e):""}
+  </nav>`}const k=e=>{const t=e.target;if(t.closest("."+g)){const n=t.dataset.category;return n?[...p(n)]:void 0}};function L(e){const{id:t,title:n,description:i,category:o}=e;return`
     <section class="article-list-box" data-id="${t}">
       <div>
         <h3>${n}</h3>
@@ -207,8 +207,8 @@ useSta...`,fileDir:"md\\react\\hooks\\useState.md"},{category:"react",id:"c91942
     <section>
       ${t}
     </section>
-  `}const f="content-body";function L(e){return`
+  `}const f="content-body";function D(e){return`
   <article class="${f}">${e!==void 0?(()=>{var n;return Array.isArray(e)?`
       <h2>${((n=e[0])==null?void 0:n.category)??""}</h2>
-      ${e.map(i=>k(i)).join("")}`:M(e)})():""}</article>
-  `}const u=e=>{const t=e.target;if(t.closest("."+f)){const n=t.closest(".article-list-box");if(n)return m(n.dataset.id??"")}},d=document.getElementById("app");document.body.className="markdown-body";const a={currentArticles:[],menus:!1},r=new Proxy(a,{set(e,t,n){return e[t]=n,D(t==="currentArticles"?n:a.currentArticles),!0}});d.addEventListener("click",e=>{const t=S(e);t&&(r.currentArticles=t),r.menus=!1});d.addEventListener("click",e=>{u(e)&&(r.currentArticles=u(e)),r.menus=!1});d.addEventListener("click",e=>{r.menus=y(e)});const D=e=>{d.innerHTML=$(a.menus)+L(e)};window.addEventListener("DOMContentLoaded",()=>{r.currentArticles=q()});
+      ${e.map(i=>L(i)).join("")}`:M(e)})():""}</article>
+  `}const u=e=>{const t=e.target;if(t.closest("."+f)){const n=t.closest(".article-list-box");if(n)return m(n.dataset.id??"")}},d=document.getElementById("app");document.body.className="markdown-body";const a={currentArticles:[],menus:!1},r=new Proxy(a,{set(e,t,n){return e[t]=n,E(t==="currentArticles"?n:a.currentArticles),!0}});d.addEventListener("click",e=>{const t=k(e);t&&(r.currentArticles=t),r.menus=!1});d.addEventListener("click",e=>{u(e)&&(r.currentArticles=u(e)),r.menus=!1});d.addEventListener("click",e=>{r.menus=y(e)});const E=e=>{d.innerHTML=S(a.menus)+D(e)};window.addEventListener("DOMContentLoaded",()=>{r.currentArticles=P()});
