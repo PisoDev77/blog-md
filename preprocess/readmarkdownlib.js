@@ -73,7 +73,7 @@ const getArticles = (dir) => {
     }
     // 폴더인 경우 폴더를 재귀적으로 복사합니다.
     else {
-      copyDir(fileDir, pathArr);
+      getArticles(fileDir);
     }
   });
 };
