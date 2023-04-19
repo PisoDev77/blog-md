@@ -1,55 +1,12 @@
 import fs from "fs";
 import path from "path";
-import cheerio from "cheerio";
 import { marked } from "marked";
-import { v4 as uuid } from "uuid";
+
+import { compareArticle } from "./lib/article.js";
 
 const data = {
   articles: [],
   currentCategory: "Default",
-};
-
-const getTitleAndDescription = (content) => {
-  // 문자열에서 첫 번째 h1 태그를 찾습니다.
-  const startIndex = content.indexOf("<h1");
-  const endIndex = content.indexOf("</h1>") + "</h1>".length;
-  const firstH1 = content.slice(startIndex, endIndex);
-
-  // 첫 번째 h1 태그에서 내용을 추출합니다.
-  const contentStartIndex = firstH1.indexOf(">") + 1;
-  const contentEndIndex = firstH1.lastIndexOf("<");
-  const title = firstH1.slice(contentStartIndex, contentEndIndex);
-
-  // cheerio를 사용하여 HTML 문자열 파싱
-  const $ = cheerio.load(`<main>${content}</main>`);
-  const str = $("main").text();
-
-  const firstIndex = str.indexOf(title); // 찾은 문자열의 첫 번째 인덱스
-  const description =
-    str.substring(0, firstIndex) + str.substring(firstIndex).replace(title, "");
-
-  return {
-    title,
-    description:
-      description.slice(0, 30) + (description.length > 30 ? "..." : ""),
-  };
-};
-
-/**
- * 하나의 글 데이터를 생성한다.
- */
-const setArticle = (fileDir) => {
-  const content = marked(fs.readFileSync(fileDir, "utf-8"));
-  const { title, description } = getTitleAndDescription(content);
-
-  data.articles.push({
-    id: uuid(),
-    category: data.currentCategory,
-    title: title !== "" ? title : fileDir.replace(/.*\\([^\\]+)\.md$/, "$1"),
-    date: Date.now(),
-    content,
-    description,
-  });
 };
 
 /**
@@ -69,7 +26,11 @@ const getArticles = (dir) => {
 
     // 파일이 맞다면 데이터를 생성한다.
     if (fs.statSync(fileDir).isFile()) {
-      setArticle(fileDir);
+      // 글을 저장하기 전 비교하기
+      data.articles.push({
+        category: data.currentCategory,
+        ...compareArticle(fileDir),
+      });
     }
     // 폴더인 경우 폴더를 재귀적으로 복사합니다.
     else {
