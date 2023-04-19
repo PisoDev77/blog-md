@@ -210,3 +210,4 @@ useSta...`}],x={id:"initial-article",category:"README",title:"",date:16818765848
       <h2>${((n=e[0])==null?void 0:n.category)??""}</h2>
       ${e.map(i=>S(i)).join("")}`:k(e)})():""}</article>
   `}const a=e=>{const t=e.target;if(t.closest("."+f)){const n=t.closest(".article-list-box");if(n)return g(n.dataset.id??"")}},d=document.getElementById("app");document.body.className="markdown-body";const u={currentArticles:[],menus:!1},l=new Proxy(u,{set(e,t,n){return e[t]=n,B(t==="currentArticles"?n:u.currentArticles),!0}});d.addEventListener("click",e=>{const t=L(e);t&&(l.currentArticles=t),l.menus=!1});d.addEventListener("click",e=>{a(e)&&(l.currentArticles=a(e)),l.menus=!1});d.addEventListener("click",e=>{l.menus=y(e)});const B=e=>{d.innerHTML=M(u.menus)+w(e)};window.addEventListener("DOMContentLoaded",()=>{l.currentArticles=R()});
+//# sourceMappingURL=index-1692dc0f.js.map
