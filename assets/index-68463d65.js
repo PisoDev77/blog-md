@@ -63,7 +63,7 @@ TEST 이미지
 <ul>
 <li>markdown을 정적 페이지로 볼 수 있는 프로젝트입니다.</li>
 </ul>
-`,description:""},$=["javascript","react"],A=()=>{const e=decodeURI(window.location.href+"/").slice(0,-1).split("/");return e[e.length-1]},h=e=>[...e==="all"?l:l.filter(t=>t.category===e)],L=()=>l.length,w=()=>$,m=e=>l.find(n=>n.id+""===e),x=()=>m(A())??v,E=e=>e.replace(/^\w/,t=>t.toUpperCase());function B(e){return`
+`,description:""},$=["javascript","react"],A=()=>{const e=decodeURI(window.location.href+"/").slice(0,-1).split("/");return e[e.length-1]},h=e=>[...e==="all"?l:l.filter(t=>t.category===e)],L=()=>l.length,w=()=>$,g=e=>l.find(n=>n.id+""===e),x=()=>g(A())??v,E=e=>e.replace(/^\w/,t=>t.toUpperCase());function B(e){return`
   <div class="modal">
   <ul class="menus ${e?"slidein":"slideout"}">
     <h2>Piso's Blog<sub> (${L()})</sub></h2>
@@ -72,11 +72,11 @@ TEST 이미지
             </li>`).join("")}
     </ul>
   </div>
-  `}const g="blog-navigation";function T(e){return`
+  `}const m="blog-navigation";function T(e){return`
   ${b()}
-  <nav class="${g}"> 
+  <nav class="${m}"> 
     ${e?B(e):""}
-  </nav>`}const k=e=>{const t=e.target;if(t.closest("."+g)){const n=t.dataset.category;return n?[...h(n)]:void 0}};function C(e){const{id:t,title:n,description:r,category:o}=e;return`
+  </nav>`}const C=e=>{const t=e.target;if(t.closest("."+m)){const n=t.dataset.category;return n?[...h(n)]:void 0}};function N(e){const{id:t,title:n,description:r,category:o}=e;return`
     <section class="article-list-box" data-id="${t}">
       <div>
         <h3>${n}</h3>
@@ -84,12 +84,12 @@ TEST 이미지
       </div>
       <img src="/${o}.svg" onerror="this.src ='/default.svg'" type="image/svg+xml" />
     </section>
-  `}function N(e){const{content:t}=e;return`
+  `}function P(e){const{content:t}=e;return`
     <section">
       ${t}
     </section>
-  `}const p="content-body";function P(e){return`
+  `}const p="content-body";function S(e){return`
   <article class="${p}">${e!==void 0?(()=>{var n;return Array.isArray(e)?`
       <h2>${((n=e[0])==null?void 0:n.category)??""}</h2>
-      ${e.map(r=>C(r)).join("")}`:N(e)})():""}</article>
-  `}const u=e=>{const t=e.target;if(t.closest("."+p)){const n=t.closest(".article-list-box");if(n)return m(n.dataset.id??"")}},s=document.getElementById("app");document.body.className="markdown-body";const a={currentArticles:[],menus:!1},c=new Proxy(a,{set(e,t,n){return e[t]=n,S(t==="currentArticles"?n:a.currentArticles),!0}});s.addEventListener("click",e=>{const t=k(e);t&&(c.currentArticles=t),c.menus=!1});s.addEventListener("click",e=>{u(e)&&(c.currentArticles=u(e)),c.menus=!1});s.addEventListener("click",e=>{c.menus=y(e)});const S=e=>{s.innerHTML=T(a.menus)+P(e)};window.addEventListener("DOMContentLoaded",()=>{c.currentArticles=x()});
+      ${e.map(r=>N(r)).join("")}`:P(e)})():""}</article>
+  `}const u=e=>{const t=e.target;if(t.closest("."+p)){const n=t.closest(".article-list-box");if(n)return g(n.dataset.id??"")}},s=document.getElementById("app");document.body.className="markdown-body";const a={currentArticles:[],menus:!1},c=new Proxy(a,{set(e,t,n){return e[t]=n,k(t==="currentArticles"?n:a.currentArticles),!0}});s.addEventListener("click",e=>{const t=C(e);t&&(c.currentArticles=t),c.menus=!1});s.addEventListener("click",e=>{u(e)&&(c.currentArticles=u(e)),c.menus=!1});s.addEventListener("click",e=>{c.menus=y(e)});const k=e=>{s.innerHTML=T(a.menus)+S(e)};window.addEventListener("DOMContentLoaded",()=>{c.currentArticles=x()});
