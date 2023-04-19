@@ -1,4 +1,4 @@
-(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))i(o);new MutationObserver(o=>{for(const c of o)if(c.type==="childList")for(const s of c.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&i(s)}).observe(document,{childList:!0,subtree:!0});function n(o){const c={};return o.integrity&&(c.integrity=o.integrity),o.referrerPolicy&&(c.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?c.credentials="include":o.crossOrigin==="anonymous"?c.credentials="omit":c.credentials="same-origin",c}function i(o){if(o.ep)return;o.ep=!0;const c=n(o);fetch(o.href,c)}})();const p="menu-btn";function b(){return`<i class="${p} bx bx-menu"></i>`}const y=e=>!!e.target.classList.contains(p),r=[{id:"ee460a9c-e926-4382-a9f1-974b1f7a3a6f",category:"javascript",title:"Debounce( 디바운스 ) VS Throttle( 쓰로틀 )",date:1681876584872,content:`<h1 id="debounce-디바운스--vs-throttle-쓰로틀-">Debounce( 디바운스 ) VS Throttle( 쓰로틀 )</h1>
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))i(o);new MutationObserver(o=>{for(const c of o)if(c.type==="childList")for(const s of c.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&i(s)}).observe(document,{childList:!0,subtree:!0});function n(o){const c={};return o.integrity&&(c.integrity=o.integrity),o.referrerPolicy&&(c.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?c.credentials="include":o.crossOrigin==="anonymous"?c.credentials="omit":c.credentials="same-origin",c}function i(o){if(o.ep)return;o.ep=!0;const c=n(o);fetch(o.href,c)}})();const h="menu-btn";function b(){return`<i class="${h} bx bx-menu"></i>`}const y=e=>!!e.target.classList.contains(h),l=[{category:"javascript",id:"4653bd0f-bc63-4cb3-8439-d1013320628a",title:"Debounce( 디바운스 ) VS Throttle( 쓰로틀 )",date:1681881976329,content:`<h1 id="debounce-디바운스--vs-throttle-쓰로틀-">Debounce( 디바운스 ) VS Throttle( 쓰로틀 )</h1>
 <h2 id="debounce--디바운스-">Debounce ( 디바운스 )</h2>
 <h3 id="구글-인프런-네이버-등-많은-웹-사이트에서-검색을-해보신-적-있나요">구글, 인프런, 네이버 등 많은 웹 사이트에서 검색을 해보신 적 있나요?</h3>
 <ul>
@@ -44,14 +44,14 @@
 </ul>
 `,description:`
 Debounce ( 디바운스 )
-구글, 인프런, 네이...`},{id:"e6b54a9f-6bd8-477e-b375-3d3bbbd1c304",category:"react",title:"React에서 컴포넌트 간에 데이터를 전달하는 방법들",date:1681876584875,content:`<h1 id="react에서-컴포넌트-간에-데이터를-전달하는-방법들">React에서 컴포넌트 간에 데이터를 전달하는 방법들</h1>
+구글, 인프런, 네이...`,fileDir:"md\\javascript\\Debounce-VS-Throttle.md"},{category:"react",id:"b8127258-8044-4994-9a6c-af62453aca18",title:"React에서 컴포넌트 간에 데이터를 전달하는 방법들",date:1681881976332,content:`<h1 id="react에서-컴포넌트-간에-데이터를-전달하는-방법들">React에서 컴포넌트 간에 데이터를 전달하는 방법들</h1>
 <h2 id="props-drilling">Props drilling</h2>
 <h2 id="context-api">Context API</h2>
 <h2 id="redux">Redux</h2>
 `,description:`
 Props drilling
 Context API
-Re...`},{id:"c642a6a0-8c91-465f-bdae-2469ad4edec5",category:"react",title:"<code>useContext</code>는 무엇이고 왜 사용하는가?",date:1681876584882,content:`<h1 id="usecontext는-무엇이고-왜-사용하는가"><code>useContext</code>는 무엇이고 왜 사용하는가?</h1>
+Re...`,fileDir:"md\\react\\hooks\\handle-data-components.md"},{category:"react",id:"1646ce8d-5e2b-4a70-9e01-1dbf1a1a52b5",title:"<code>useContext</code>는 무엇이고 왜 사용하는가?",date:1681881976341,content:`<h1 id="usecontext는-무엇이고-왜-사용하는가"><code>useContext</code>는 무엇이고 왜 사용하는가?</h1>
 <h2 id="usecontext">useContext</h2>
 <ul>
 <li><p>컴포넌트간 데이터를 전달하는 Hook</p>
@@ -113,10 +113,8 @@ function MyComponent() {
 <li><code>useContext</code>로 같은 데이터를 상태로 사용하는 모든 컴포넌트가 렌더링되는 이슈가 존재.</li>
 <li>모든 컴포넌트가 불필요하게 렌더링된다면, 성능이나 사용자 경험에 부정적 영향을 줄 수 있음.</li>
 </ul>
-<pre><code>
-</code></pre>
 `,description:`useContext는 무엇이고 왜 사용하는가?
-useC...`},{id:"0814b65c-4e54-4e02-9bb3-c263d6adfb5f",category:"react",title:"<code>useReducer</code> 무엇이고 왜 사용하는가?",date:1681876584886,content:`<h1 id="usereducer-무엇이고-왜-사용하는가"><code>useReducer</code> 무엇이고 왜 사용하는가?</h1>
+useC...`,fileDir:"md\\react\\hooks\\useContext.md"},{category:"react",id:"f980fe08-7b8e-4d7f-bef9-d8423d65c606",title:"<code>useReducer</code> 무엇이고 왜 사용하는가?",date:1681881976345,content:`<h1 id="usereducer-무엇이고-왜-사용하는가"><code>useReducer</code> 무엇이고 왜 사용하는가?</h1>
 <h2 id="usereducer">useReducer</h2>
 <ul>
 <li><p><code>상태(state)</code>를 관리하기 위한 React Hook, <code>useState</code>보다 복잡한 상태를 관리할 때.</p>
@@ -142,7 +140,7 @@ const initialState = {
 </li>
 </ul>
 `,description:`useReducer 무엇이고 왜 사용하는가?
-useRe...`},{id:"8054f9b5-6831-4d60-8325-feb85b052c9c",category:"react",title:"<code>useState</code>는 무엇이고 왜 사용하는가?",date:1681876584892,content:`<h1 id="usestate는-무엇이고-왜-사용하는가"><code>useState</code>는 무엇이고 왜 사용하는가?</h1>
+useRe...`,fileDir:"md\\react\\hooks\\useReducer.md"},{category:"react",id:"4a26bd83-8847-45ed-83f1-dee3082fc093",title:"<code>useState</code>는 무엇이고 왜 사용하는가?",date:1681881976352,content:`<h1 id="usestate는-무엇이고-왜-사용하는가"><code>useState</code>는 무엇이고 왜 사용하는가?</h1>
 <h2 id="usestate">useState</h2>
 <ul>
 <li><code>상태(state)</code>를 관리하기 위한 React Hook</li>
@@ -171,7 +169,11 @@ useRe...`},{id:"8054f9b5-6831-4d60-8325-feb85b052c9c",category:"react",title:"<c
 <li>가능한 의존성을 줄이는 것을 목표 왜냐하면 유지보수성과 코드의 복잡도를 위해서.</li>
 </ul>
 `,description:`useState는 무엇이고 왜 사용하는가?
-useSta...`}],x={id:"initial-article",category:"README",title:"",date:1681876584892,content:`<h1 id="blog-md">blog-md</h1>
+useSta...`,fileDir:"md\\react\\hooks\\useState.md"},{category:"react",id:"c9194208-0ec6-4286-838b-bc2671a200af",title:"REACT TEST",date:1681882077986,content:`<h1 id="react-test">REACT TEST</h1>
+<h1 id="수정-후후후후wdgwdbwrbwrb">수정 후후후후wdgwdbwrbwrb</h1>
+`,description:`
+수정 후후후후wdgwdbwrbwrb
+`,fileDir:"md\\react\\test.md"}],x={id:"initial-article",category:"README",title:"",date:1681882077986,content:`<h1 id="blog-md">blog-md</h1>
 <blockquote>
 <p><code>TypeScript</code>와 <code>Vite</code> 그리고 <code>Node</code>의 <code>fs</code> 모듈을 활용한 &#39;Markdown to html&#39; 프로젝트입니다.
 복잡한 기타 라이브러리들은 이해하기에 난해하여, 단순한 프로세스로 만든 프로젝트입니다.
@@ -180,20 +182,20 @@ useSta...`}],x={id:"initial-article",category:"README",title:"",date:16818765848
 <ul>
 <li>markdown을 정적 페이지로 볼 수 있는 프로젝트입니다.</li>
 </ul>
-`,description:""},v=["javascript","react"],C=()=>{const e=decodeURI(window.location.href+"/").slice(0,-1).split("/");return e[e.length-1]},h=e=>[...e==="all"?r:r.filter(t=>t.category===e)],q=()=>r.length,A=()=>v,g=e=>r.find(n=>n.id+""===e),R=()=>g(C())??x,P=e=>e.replace(/^\w/,t=>t.toUpperCase());function $(e){return`
+`,description:""},C=["javascript","react"],v=()=>{const e=decodeURI(window.location.href+"/").slice(0,-1).split("/");return e[e.length-1]},p=e=>[...e==="all"?l:l.filter(t=>t.category===e)],A=()=>l.length,R=()=>C,m=e=>l.find(n=>n.id+""===e),q=()=>m(v())??x,w=e=>e.replace(/^\w/,t=>t.toUpperCase());function P(e){return`
   <div class="modal">
   <ul class="menus ${e?"slidein":"slideout"}">
-    <h2>Piso's Blog<sub> (${q()})</sub></h2>
-      ${A().map(t=>`<li data-category="${t}">
-              ${P(t)} <sub>(${h(t).length})</sub>
+    <h2>Piso's Blog<sub> (${A()})</sub></h2>
+      ${R().map(t=>`<li data-category="${t}">
+              ${w(t)} <sub>(${p(t).length})</sub>
             </li>`).join("")}
     </ul>
   </div>
-  `}const m="blog-navigation";function M(e){return`
+  `}const g="blog-navigation";function $(e){return`
   ${b()}
-  <nav class="${m}"> 
-    ${e?$(e):""}
-  </nav>`}const L=e=>{const t=e.target;if(t.closest("."+m)){const n=t.dataset.category;return n?[...h(n)]:void 0}};function S(e){console.log("sss","/");const{id:t,title:n,description:i,category:o}=e;return`
+  <nav class="${g}"> 
+    ${e?P(e):""}
+  </nav>`}const S=e=>{const t=e.target;if(t.closest("."+g)){const n=t.dataset.category;return n?[...p(n)]:void 0}};function k(e){const{id:t,title:n,description:i,category:o}=e;return`
     <section class="article-list-box" data-id="${t}">
       <div>
         <h3>${n}</h3>
@@ -201,12 +203,12 @@ useSta...`}],x={id:"initial-article",category:"README",title:"",date:16818765848
       </div>
       <img src="./${o}.svg" onerror="this.src ='/default.svg'" type="image/svg+xml" />
     </section>
-  `}function k(e){const{content:t}=e;return`
-    <section">
+  `}function M(e){const{content:t}=e;return`
+    <section>
       ${t}
     </section>
-  `}const f="content-body";function w(e){return`
+  `}const f="content-body";function L(e){return`
   <article class="${f}">${e!==void 0?(()=>{var n;return Array.isArray(e)?`
       <h2>${((n=e[0])==null?void 0:n.category)??""}</h2>
-      ${e.map(i=>S(i)).join("")}`:k(e)})():""}</article>
-  `}const a=e=>{const t=e.target;if(t.closest("."+f)){const n=t.closest(".article-list-box");if(n)return g(n.dataset.id??"")}},d=document.getElementById("app");document.body.className="markdown-body";const u={currentArticles:[],menus:!1},l=new Proxy(u,{set(e,t,n){return e[t]=n,B(t==="currentArticles"?n:u.currentArticles),!0}});d.addEventListener("click",e=>{const t=L(e);t&&(l.currentArticles=t),l.menus=!1});d.addEventListener("click",e=>{a(e)&&(l.currentArticles=a(e)),l.menus=!1});d.addEventListener("click",e=>{l.menus=y(e)});const B=e=>{d.innerHTML=M(u.menus)+w(e)};window.addEventListener("DOMContentLoaded",()=>{l.currentArticles=R()});
+      ${e.map(i=>k(i)).join("")}`:M(e)})():""}</article>
+  `}const u=e=>{const t=e.target;if(t.closest("."+f)){const n=t.closest(".article-list-box");if(n)return m(n.dataset.id??"")}},d=document.getElementById("app");document.body.className="markdown-body";const a={currentArticles:[],menus:!1},r=new Proxy(a,{set(e,t,n){return e[t]=n,D(t==="currentArticles"?n:a.currentArticles),!0}});d.addEventListener("click",e=>{const t=S(e);t&&(r.currentArticles=t),r.menus=!1});d.addEventListener("click",e=>{u(e)&&(r.currentArticles=u(e)),r.menus=!1});d.addEventListener("click",e=>{r.menus=y(e)});const D=e=>{d.innerHTML=$(a.menus)+L(e)};window.addEventListener("DOMContentLoaded",()=>{r.currentArticles=q()});
