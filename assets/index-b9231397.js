@@ -1,4 +1,4 @@
-(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))c(o);new MutationObserver(o=>{for(const r of o)if(r.type==="childList")for(const d of r.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&c(d)}).observe(document,{childList:!0,subtree:!0});function n(o){const r={};return o.integrity&&(r.integrity=o.integrity),o.referrerPolicy&&(r.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?r.credentials="include":o.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function c(o){if(o.ep)return;o.ep=!0;const r=n(o);fetch(o.href,r)}})();const f="menu-btn";function b(){return`<i class="${f} bx bx-menu"></i>`}const y=e=>!!e.target.classList.contains(f),l=[{id:"b862a22a-68b3-4f16-9280-21c478420e0e",category:"javascript",title:"Debounce( 디바운스 ) VS Throttle( 쓰로틀 )",date:1681775789984,content:`<h1 id="debounce-디바운스--vs-throttle-쓰로틀-">Debounce( 디바운스 ) VS Throttle( 쓰로틀 )</h1>
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))r(o);new MutationObserver(o=>{for(const i of o)if(i.type==="childList")for(const d of i.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&r(d)}).observe(document,{childList:!0,subtree:!0});function n(o){const i={};return o.integrity&&(i.integrity=o.integrity),o.referrerPolicy&&(i.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?i.credentials="include":o.crossOrigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function r(o){if(o.ep)return;o.ep=!0;const i=n(o);fetch(o.href,i)}})();const f="menu-btn";function b(){return`<i class="${f} bx bx-menu"></i>`}const y=e=>!!e.target.classList.contains(f),l=[{id:"0c6a5258-1ad8-42e7-93eb-c52b2aa69e26",category:"javascript",title:"Debounce( 디바운스 ) VS Throttle( 쓰로틀 )",date:1681779568542,content:`<h1 id="debounce-디바운스--vs-throttle-쓰로틀-">Debounce( 디바운스 ) VS Throttle( 쓰로틀 )</h1>
 <h2 id="debounce--디바운스-">Debounce ( 디바운스 )</h2>
 <h3 id="구글-인프런-네이버-등-많은-웹-사이트에서-검색을-해보신-적-있나요">구글, 인프런, 네이버 등 많은 웹 사이트에서 검색을 해보신 적 있나요?</h3>
 <ul>
@@ -44,9 +44,17 @@
 </ul>
 `,description:`
 Debounce ( 디바운스 )
-구글, 인프런, 네이...`},{id:"25ec7c5c-7980-4ffa-a81e-c22fae7ceda6",category:"react",title:"test1",date:1681775789986,content:`<h2 id="리액트-카테고리의-글입니다">리액트 카테고리의 글입니다.</h2>
+구글, 인프런, 네이...`},{id:"76974add-7ca1-43bc-bf55-9b714fbef843",category:"react",title:"test1",date:1681779568545,content:`<h2 id="리액트-카테고리의-글입니다">리액트 카테고리의 글입니다.</h2>
+<h3 id="test-이미지">TEST 이미지</h3>
+<ul>
+<li><img src="/imgs/test.jpg" alt="test"></li>
+</ul>
 `,description:`리액트 카테고리의 글입니다.
-`}],v={id:"initial-article",category:"README",title:"",date:1681775789986,content:`<h1 id="blog-md">blog-md</h1>
+TEST 이미지
+
+
+
+`}],v={id:"initial-article",category:"README",title:"",date:1681779568545,content:`<h1 id="blog-md">blog-md</h1>
 <blockquote>
 <p><code>TypeScript</code>와 <code>Vite</code> 그리고 <code>Node</code>의 <code>fs</code> 모듈을 활용한 &#39;Markdown to html&#39; 프로젝트입니다.
 복잡한 기타 라이브러리들은 이해하기에 난해하여, 단순한 프로세스로 만든 프로젝트입니다.
@@ -55,33 +63,33 @@ Debounce ( 디바운스 )
 <ul>
 <li>markdown을 정적 페이지로 볼 수 있는 프로젝트입니다.</li>
 </ul>
-`,description:""},$=["javascript","react"],A=()=>{const e=decodeURI(window.location.href+"/").slice(0,-1).split("/");return e[e.length-1]},h=e=>[...e==="all"?l:l.filter(t=>t.category===e)],L=()=>l.length,w=()=>$,m=e=>l.find(n=>n.id+""===e),x=()=>m(A())??v,B=e=>e.replace(/^\w/,t=>t.toUpperCase());function E(e){return`
+`,description:""},$=["javascript","react"],A=()=>{const e=decodeURI(window.location.href+"/").slice(0,-1).split("/");return e[e.length-1]},h=e=>[...e==="all"?l:l.filter(t=>t.category===e)],L=()=>l.length,w=()=>$,m=e=>l.find(n=>n.id+""===e),x=()=>m(A())??v,E=e=>e.replace(/^\w/,t=>t.toUpperCase());function B(e){return`
   <div class="modal">
   <ul class="menus ${e?"slidein":"slideout"}">
     <h2>Piso's Blog<sub> (${L()})</sub></h2>
       ${w().map(t=>`<li data-category="${t}">
-              ${B(t)} <sub>(${h(t).length})</sub>
+              ${E(t)} <sub>(${h(t).length})</sub>
             </li>`).join("")}
     </ul>
   </div>
-  `}const g="blog-navigation";function k(e){return`
+  `}const g="blog-navigation";function T(e){return`
   ${b()}
   <nav class="${g}"> 
-    ${e?E(e):""}
-  </nav>`}const C=e=>{const t=e.target;if(t.closest("."+g)){const n=t.dataset.category;return n?[...h(n)]:void 0}};function N(e){const{id:t,title:n,description:c,category:o}=e;return`
+    ${e?B(e):""}
+  </nav>`}const k=e=>{const t=e.target;if(t.closest("."+g)){const n=t.dataset.category;return n?[...h(n)]:void 0}};function C(e){const{id:t,title:n,description:r,category:o}=e;return`
     <section class="article-list-box" data-id="${t}">
       <div>
         <h3>${n}</h3>
-        <p>${c}</p>
+        <p>${r}</p>
       </div>
       <img src="/${o}.svg" onerror="this.src ='/default.svg'" type="image/svg+xml" />
     </section>
-  `}function P(e){const{content:t}=e;return`
+  `}function N(e){const{content:t}=e;return`
     <section">
       ${t}
     </section>
-  `}const p="content-body";function q(e){return`
+  `}const p="content-body";function P(e){return`
   <article class="${p}">${e!==void 0?(()=>{var n;return Array.isArray(e)?`
       <h2>${((n=e[0])==null?void 0:n.category)??""}</h2>
-      ${e.map(c=>N(c)).join("")}`:P(e)})():""}</article>
-  `}const u=e=>{const t=e.target;if(t.closest("."+p)){const n=t.closest(".article-list-box");if(n)return m(n.dataset.id??"")}},s=document.getElementById("app");document.body.className="markdown-body";const a={currentArticles:[],menus:!1},i=new Proxy(a,{set(e,t,n){return e[t]=n,D(t==="currentArticles"?n:a.currentArticles),!0}});s.addEventListener("click",e=>{const t=C(e);t&&(i.currentArticles=t),i.menus=!1});s.addEventListener("click",e=>{u(e)&&(i.currentArticles=u(e)),i.menus=!1});s.addEventListener("click",e=>{i.menus=y(e)});const D=e=>{s.innerHTML=k(a.menus)+q(e)};window.addEventListener("DOMContentLoaded",()=>{i.currentArticles=x()});
+      ${e.map(r=>C(r)).join("")}`:N(e)})():""}</article>
+  `}const u=e=>{const t=e.target;if(t.closest("."+p)){const n=t.closest(".article-list-box");if(n)return m(n.dataset.id??"")}},s=document.getElementById("app");document.body.className="markdown-body";const a={currentArticles:[],menus:!1},c=new Proxy(a,{set(e,t,n){return e[t]=n,S(t==="currentArticles"?n:a.currentArticles),!0}});s.addEventListener("click",e=>{const t=k(e);t&&(c.currentArticles=t),c.menus=!1});s.addEventListener("click",e=>{u(e)&&(c.currentArticles=u(e)),c.menus=!1});s.addEventListener("click",e=>{c.menus=y(e)});const S=e=>{s.innerHTML=T(a.menus)+P(e)};window.addEventListener("DOMContentLoaded",()=>{c.currentArticles=x()});
