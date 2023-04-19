@@ -201,10 +201,10 @@ useSta...`,fileDir:"md\\react\\hooks\\useState.md"},{category:"react",id:"c91942
         <h3>${n}</h3>
         <p>${i}</p>
       </div>
-      <img src="./${o}.svg" onerror="this.src ='/default.svg'" type="image/svg+xml" />
+      <img src="/${o}.svg" onerror="this.src ='/default.svg'" type="image/svg+xml" />
     </section>
   `}function M(e){const{content:t}=e;return`
-    <section>
+    <section">
       ${t}
     </section>
   `}const f="content-body";function D(e){return`
