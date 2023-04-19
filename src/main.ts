@@ -1,5 +1,4 @@
 import "./style.css";
-import "./darkmode.css";
 
 import Navigation, { eventHandler as navEvent } from "./components/Nav";
 import Article, { eventHandler as articleEvent } from "./components/Article";
