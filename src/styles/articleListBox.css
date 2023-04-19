@@ -30,6 +30,7 @@
 
 .article-list-box > img {
   flex-grow: 2;
+  max-width: 10rem;
   width: 20%;
   background: none;
 }
