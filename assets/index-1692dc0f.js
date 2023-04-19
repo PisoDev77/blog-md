@@ -193,13 +193,13 @@ useSta...`}],x={id:"initial-article",category:"README",title:"",date:16818765848
   ${b()}
   <nav class="${m}"> 
     ${e?$(e):""}
-  </nav>`}const L=e=>{const t=e.target;if(t.closest("."+m)){const n=t.dataset.category;return n?[...h(n)]:void 0}};function S(e){console.log("sss","/");const{id:t,title:n,description:i,category:o}=e;return`
+  </nav>`}const L=e=>{const t=e.target;if(t.closest("."+m)){const n=t.dataset.category;return n?[...h(n)]:void 0}};function S(e){const{id:t,title:n,description:i,category:o}=e;return`
     <section class="article-list-box" data-id="${t}">
       <div>
         <h3>${n}</h3>
         <p>${i}</p>
       </div>
-      <img src="./${o}.svg" onerror="this.src ='/default.svg'" type="image/svg+xml" />
+      <img src="/${o}.svg" onerror="this.src ='/default.svg'" type="image/svg+xml" />
     </section>
   `}function k(e){const{content:t}=e;return`
     <section">
