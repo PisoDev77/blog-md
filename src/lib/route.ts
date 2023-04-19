@@ -5,4 +5,9 @@ const getArticleIdFromURL = () => {
   return arr[arr.length - 1];
 };
 
-export { getArticleIdFromURL };
+const getArticleIdFromParam = () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get("id");
+};
+
+export { getArticleIdFromURL, getArticleIdFromParam };

@@ -1,6 +1,6 @@
 import { articles, categories, readme } from "../data.json";
 import { articleType } from "../type/article";
-import { getArticleIdFromURL } from "./route";
+import { getArticleIdFromURL, getArticleIdFromParam } from "./route";
 
 const getArticlesByCategory = (category: string): articleType[] => {
   return [
@@ -24,7 +24,10 @@ const getArticle = (id: string) => {
 };
 
 const getArticleByURL = () => {
-  return getArticle(getArticleIdFromURL()) ?? readme;
+  // 정적 서비스
+  // const tmp = getArticleIdFromParam();
+  // 동적 서비스
+  return getArticle(getArticleIdFromParam() ?? getArticleIdFromURL()) ?? readme;
 };
 
 export {
