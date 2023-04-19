@@ -93,3 +93,4 @@ TEST 이미지
       <h2>${((n=e[0])==null?void 0:n.category)??""}</h2>
       ${e.map(r=>N(r)).join("")}`:P(e)})():""}</article>
   `}const u=e=>{const t=e.target;if(t.closest("."+p)){const n=t.closest(".article-list-box");if(n)return g(n.dataset.id??"")}},s=document.getElementById("app");document.body.className="markdown-body";const a={currentArticles:[],menus:!1},c=new Proxy(a,{set(e,t,n){return e[t]=n,k(t==="currentArticles"?n:a.currentArticles),!0}});s.addEventListener("click",e=>{const t=C(e);t&&(c.currentArticles=t),c.menus=!1});s.addEventListener("click",e=>{u(e)&&(c.currentArticles=u(e)),c.menus=!1});s.addEventListener("click",e=>{c.menus=y(e)});const k=e=>{s.innerHTML=T(a.menus)+S(e)};window.addEventListener("DOMContentLoaded",()=>{c.currentArticles=x()});
+//# sourceMappingURL=index-68463d65.js.map
