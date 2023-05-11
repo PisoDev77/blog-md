@@ -4,7 +4,7 @@ export default function ArticleBox(article: articleType) {
   const { content } = article;
 
   return `
-    <section">
+    <section>
       ${content}
     </section>
   `;
