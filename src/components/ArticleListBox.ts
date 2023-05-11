@@ -11,7 +11,7 @@ export default function ArticleListBox(article: articleType) {
         <h3>${title}</h3>
         <p>${description}</p>
       </div>
-      <img src="/${category}.svg" onerror="this.src ='/default.svg'" type="image/svg+xml" />
+      <img src="./${category}.svg" onerror="this.src ='/blog-md/default.svg'" type="image/svg+xml" />
     </section>
   `;
 }
